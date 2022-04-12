@@ -1,1 +1,16 @@
 <app-tarjetas></app-tarjetas>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let hero of newCaracteres" class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img [src]="hero.thumbnail.path + '.' + hero.thumbnail.extension" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ hero.name }}</h5>
+                  <p class="card-text">{{ hero.description }}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
